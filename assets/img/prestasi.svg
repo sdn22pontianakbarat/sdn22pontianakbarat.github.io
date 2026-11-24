@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600" role="img" aria-label="Ilustrasi prestasi siswa">
+  <rect width="800" height="600" fill="#fff8f8"/>
+  <circle cx="400" cy="250" r="170" fill="#ffe4e7"/>
+  <g fill="#c1121f">
+    <path d="M330 150h140v70c0 46-31 78-70 78s-70-32-70-78z"/>
+    <path d="M300 160h30v40c-22 0-30-18-30-40zM470 160h30c0 22-8 40-30 40z" opacity=".7"/>
+    <rect x="382" y="292" width="36" height="50"/>
+    <rect x="340" y="338" width="120" height="22" rx="6"/>
+    <rect x="322" y="360" width="156" height="26" rx="8" opacity=".85"/>
+  </g>
+  <g fill="#8b0f1a" opacity=".85">
+    <circle cx="250" cy="230" r="7"/><circle cx="550" cy="210" r="9"/><circle cx="196" cy="330" r="6"/><circle cx="612" cy="320" r="7"/>
+    <path d="M236 300l22 8-16 40-22-8z"/><path d="M566 380l24-6 12 42-24 6z"/>
+  </g>
+  <text x="400" y="500" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="26" font-weight="800" fill="#8b0f1a" opacity=".55">Prestasi Siswa</text>
+  <text x="400" y="538" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="20" fill="#8b0f1a" opacity=".4">Tingkat kecamatan, kota, dan provinsi</text>
+</svg>

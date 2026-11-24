@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Akademik — SDN 22 Pontianak Barat</title>
+<meta name="description" content="Program unggulan, agenda akademik, prestasi, ekstrakurikuler, dan kalender pendidikan SD Negeri 22 Pontianak Barat." />
+<meta name="theme-color" content="#c1121f" />
+<link rel="icon" href="assets/img/gedung.svg" type="image/svg+xml" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/css/style.css" />
+<script>document.documentElement.classList.add("js");</script>
+</head>
+<body data-page="akademik">
+
+<div data-site-header></div>
+
+<main id="main">
+
+<section class="page-hero">
+  <div class="container">
+    <div class="crumbs"><a href="index.html">Beranda</a> <span>/</span> <span>Akademik</span></div>
+    <h1>Akademik &amp; Kegiatan</h1>
+    <p>Program unggulan, agenda akademik, prestasi, ekstrakurikuler, dan kalender pendidikan sekolah.</p>
+  </div>
+</section>
+
+<!-- ================= PROGRAM ================= -->
+<section class="section" id="program">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="section-head__copy">
+        <span class="eyebrow">Program Unggulan</span>
+        <h2>Pembelajaran adaptif untuk masa depan</h2>
+        <p>Program yang menyeimbangkan akademik, karakter, literasi, dan teknologi.</p>
+      </div>
+    </div>
+    <div class="grid grid--4 reveal" data-program></div>
+  </div>
+</section>
+
+<!-- ================= AGENDA ================= -->
+<section class="section section--abu" id="agenda">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="section-head__copy">
+        <span class="eyebrow">Agenda Akademik</span>
+        <h2>Kalender kegiatan sekolah</h2>
+        <p>Agenda penting yang perlu diketahui siswa, orang tua, dan guru.</p>
+      </div>
+      <a class="link-more" data-link="kalenderPendidikan">Buka kalender pendidikan
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+
+    <div class="split split--start">
+      <div class="reveal">
+        <div class="agenda" data-agenda></div>
+      </div>
+      <div class="reveal">
+        <div class="embed embed--kalender" data-embed="kalenderPendidikan" data-title="Kalender pendidikan sekolah">
+          <div class="embed__inner">
+            <div class="embed__placeholder">
+              <div>
+                <div class="embed__placeholder-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></div>
+                <h4>Kalender Pendidikan</h4>
+                <p>Kalender pendidikan dan agenda sekolah.</p>
+                <button class="btn btn--ghost btn--sm" data-load type="button">Muat kalender</button>
+              </div>
+            </div>
+          </div>
+          <div class="embed__note">Sumber: kalender pendidikan sekolah</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PRESTASI ================= -->
+<section class="section" id="prestasi">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="section-head__copy">
+        <span class="eyebrow">Prestasi</span>
+        <h2>Capaian sekolah, siswa, dan guru</h2>
+        <p>Dokumentasi prestasi akademik dan non-akademik warga sekolah.</p>
+      </div>
+    </div>
+    <div class="reveal" data-achievements></div>
+  </div>
+</section>
+
+<!-- ================= EKSKUL ================= -->
+<section class="section section--abu" id="ekskul">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="section-head__copy">
+        <span class="eyebrow">Ekstrakurikuler</span>
+        <h2>Ruang minat, bakat, dan kepemimpinan</h2>
+        <p>Pembinaan rutin dengan pendampingan guru dan pelatih.</p>
+      </div>
+      <a class="link-more" href="galeri.html#video">Lihat dokumentasi
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+    <div class="grid grid--3 reveal" data-ekskul></div>
+  </div>
+</section>
+
+<section class="section section--tight">
+  <div class="container">
+    <div class="cta reveal">
+      <div>
+        <h2>Ingin mengetahui layanan akademik lebih lanjut?</h2>
+        <p>Hubungi sekolah untuk informasi kurikulum, penilaian, dan layanan pembelajaran.</p>
+      </div>
+      <div class="cta__actions">
+        <a class="btn btn--light" href="kontak.html">Hubungi Sekolah</a>
+        <a class="btn btn--outline-light" href="informasi.html#unduhan">Unduhan</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<div data-site-footer></div>
+
+<script src="assets/js/data.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

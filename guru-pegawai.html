@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Guru &amp; Pegawai — SDN 22 Pontianak Barat</title>
+<meta name="description" content="Direktori kepala sekolah, guru, dan tenaga kependidikan SD Negeri 22 Pontianak Barat beserta NIP, pendidikan, dan bidang tugas." />
+<meta name="theme-color" content="#c1121f" />
+<link rel="icon" href="assets/img/gedung.svg" type="image/svg+xml" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/css/style.css" />
+<script>document.documentElement.classList.add("js");</script>
+</head>
+<body data-page="guru">
+
+<div data-site-header></div>
+
+<main id="main">
+
+<section class="page-hero">
+  <div class="container">
+    <div class="crumbs"><a href="index.html">Beranda</a> <span>/</span> <span>Warga Sekolah</span> <span>/</span> <span>Guru &amp; Pegawai</span></div>
+    <h1>Guru &amp; Pegawai</h1>
+    <p>Direktori pendidik dan tenaga kependidikan SD Negeri 22 Pontianak Barat, tahun pelajaran <span data-cfg="sekolah.tahunPelajaran">2026/2027</span>.</p>
+  </div>
+</section>
+
+<section class="section section--tight">
+  <div class="container">
+    <div class="stats reveal">
+      <div class="stat"><div class="stat__num"><span data-count="personil">0</span></div><div class="stat__lbl">Total Personil</div></div>
+      <div class="stat"><div class="stat__num"><span data-count="pns">0</span></div><div class="stat__lbl">PNS</div></div>
+      <div class="stat"><div class="stat__num"><span data-count="pppk">0</span></div><div class="stat__lbl">PPPK</div></div>
+      <div class="stat"><div class="stat__num"><span data-count="honor">0</span></div><div class="stat__lbl">Honor Sekolah</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0">
+  <div class="container">
+    <div class="toolbar">
+      <div class="chips">
+        <button class="chip-btn is-active" type="button" data-staff-filter="semua">Semua</button>
+        <button class="chip-btn" type="button" data-staff-filter="kepsek">Kepala Sekolah</button>
+        <button class="chip-btn" type="button" data-staff-filter="guru">Guru</button>
+        <button class="chip-btn" type="button" data-staff-filter="pegawai">Pegawai</button>
+      </div>
+      <label class="searchbox">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <input type="search" placeholder="Cari nama atau tugas…" data-staff-search aria-label="Cari personil" />
+      </label>
+    </div>
+    <p class="result-count" data-staff-count-label></p>
+    <div class="grid grid--4" data-staff-grid></div>
+  </div>
+</section>
+
+<section class="section section--abu">
+  <div class="container">
+    <div class="split split--start">
+      <div class="reveal">
+        <span class="eyebrow">Rekap Ketenagaan</span>
+        <h2>Komposisi personil sekolah</h2>
+        <p class="muted">Rekap status kepegawaian berdasarkan data personil sekolah. Angka dapat berubah mengikuti pembaruan data Dapodik.</p>
+        <div class="table-wrap" style="margin-top:18px">
+          <table>
+            <thead><tr><th>Status</th><th>Jumlah</th></tr></thead>
+            <tbody>
+              <tr><td>PNS</td><td><span data-count="pns">0</span> orang</td></tr>
+              <tr><td>PPPK</td><td><span data-count="pppk">0</span> orang</td></tr>
+              <tr><td>Honor Sekolah</td><td><span data-count="honor">0</span> orang</td></tr>
+            </tbody>
+            <tfoot><tr><td>Total Personil</td><td><span data-count="personil">0</span> orang</td></tr></tfoot>
+          </table>
+        </div>
+      </div>
+      <div class="reveal">
+        <div class="card card--soft">
+          <div class="card__body">
+            <span class="badge">Informasi</span>
+            <h3 style="margin-top:10px">Struktur organisasi</h3>
+            <p class="small muted">Bagan struktur organisasi resmi sekolah tersedia dalam desain Canva dan dibuka pada tab baru.</p>
+            <div style="display:flex;gap:10px;flex-wrap:wrap">
+              <a class="btn btn--primary btn--sm" data-link="canvaStruktur">Buka Bagan Canva</a>
+              <a class="btn btn--ghost btn--sm" href="profil.html#struktur">Lihat Struktur</a>
+            </div>
+          </div>
+        </div>
+        <div class="card" style="margin-top:16px">
+          <div class="card__body">
+            <h3 style="font-size:1rem">Catatan data</h3>
+            <p class="small muted" style="margin:0">Foto dan data personil bersumber dari master data sekolah. Jika terdapat perbedaan data, silakan hubungi Tata Usaha untuk pembaruan.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--tight">
+  <div class="container">
+    <div class="cta reveal">
+      <div>
+        <h2>Butuh menghubungi guru atau wali kelas?</h2>
+        <p>Silakan menghubungi Tata Usaha sekolah pada jam layanan untuk diarahkan ke guru yang bersangkutan.</p>
+      </div>
+      <div class="cta__actions"><a class="btn btn--light" href="kontak.html">Kontak Sekolah</a></div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<div data-site-footer></div>
+
+<script src="assets/js/data.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

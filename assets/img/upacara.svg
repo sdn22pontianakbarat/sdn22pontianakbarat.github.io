@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600" role="img" aria-label="Ilustrasi upacara bendera">
+  <rect width="800" height="600" fill="#fff5f5"/>
+  <circle cx="650" cy="140" r="95" fill="#ffe1e4"/>
+  <path d="M0 470h800v130H0z" fill="#ffd9dd"/>
+  <rect x="248" y="110" width="9" height="370" rx="4" fill="#8b0f1a"/>
+  <rect x="257" y="120" width="200" height="62" fill="#c1121f"/>
+  <rect x="257" y="182" width="200" height="62" fill="#ffffff" stroke="#eccfd2" stroke-width="3"/>
+  <g fill="#c1121f" opacity=".85">
+    <circle cx="180" cy="440" r="22"/><rect x="162" y="462" width="36" height="52" rx="14"/>
+    <circle cx="300" cy="450" r="22"/><rect x="282" y="472" width="36" height="46" rx="14"/>
+    <circle cx="420" cy="452" r="22"/><rect x="402" y="474" width="36" height="44" rx="14"/>
+    <circle cx="540" cy="446" r="22"/><rect x="522" y="468" width="36" height="48" rx="14"/>
+  </g>
+  <text x="400" y="566" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" fill="#8b0f1a" opacity=".5">Upacara Bendera</text>
+</svg>

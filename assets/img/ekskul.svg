@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600" role="img" aria-label="Ilustrasi kegiatan ekstrakurikuler">
+  <rect width="800" height="600" fill="#ffffff"/>
+  <rect x="0" y="0" width="800" height="600" fill="#fff5f5" opacity=".7"/>
+  <circle cx="300" cy="300" r="130" fill="none" stroke="#c1121f" stroke-width="10"/>
+  <path d="M300 170a130 130 0 0 1 0 260" fill="none" stroke="#c1121f" stroke-width="10"/>
+  <path d="M170 300h260" stroke="#c1121f" stroke-width="10"/>
+  <circle cx="300" cy="300" r="26" fill="#8b0f1a"/>
+  <g fill="#8b0f1a" opacity=".8">
+    <rect x="520" y="240" width="18" height="120" rx="9"/>
+    <circle cx="514" cy="366" r="22"/>
+    <path d="M538 240c40 10 54 42 34 78l-20-10c14-24 6-44-20-52z"/>
+    <rect x="620" y="270" width="18" height="90" rx="9"/>
+    <circle cx="614" cy="366" r="22"/>
+    <path d="M638 270c34 8 44 34 28 62l-18-10c12-18 6-32-16-38z"/>
+  </g>
+  <text x="400" y="520" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" fill="#8b0f1a" opacity=".5">Ekstrakurikuler</text>
+</svg>

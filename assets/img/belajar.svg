@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600" role="img" aria-label="Ilustrasi kegiatan belajar di kelas">
+  <rect width="800" height="600" fill="#ffffff"/>
+  <rect x="0" y="430" width="800" height="170" fill="#f6f7f9"/>
+  <rect x="170" y="150" width="460" height="230" rx="18" fill="#c1121f" opacity=".08"/>
+  <rect x="170" y="150" width="460" height="230" rx="18" fill="none" stroke="#eccfd2" stroke-width="4"/>
+  <g stroke="#c1121f" stroke-width="14" stroke-linecap="round" opacity=".9">
+    <path d="M240 220h180"/>
+    <path d="M240 270h300"/>
+    <path d="M240 320h230"/>
+  </g>
+  <path d="M600 250l60 20-120 120-46 16 10-46z" fill="#8b0f1a" opacity=".85"/>
+  <path d="M120 470h420v22H120z" fill="#e9ecf1"/>
+  <path d="M150 492h40v58h-40zM470 492h40v58h-40z" fill="#d7dbe3"/>
+  <circle cx="640" cy="500" r="46" fill="#c1121f" opacity=".14"/>
+  <path d="M612 500l20 20 38-40" fill="none" stroke="#c1121f" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="400" y="566" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" fill="#8b0f1a" opacity=".45">Pembelajaran di Kelas</text>
+</svg>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Informasi, Pengumuman &amp; Unduhan — SDN 22 Pontianak Barat</title>
+<meta name="description" content="Pengumuman resmi, unduhan aplikasi, FAQ, mading online, buku tamu, dan tautan penting SD Negeri 22 Pontianak Barat." />
+<meta name="theme-color" content="#c1121f" />
+<link rel="icon" href="assets/img/gedung.svg" type="image/svg+xml" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/css/style.css" />
+<script>document.documentElement.classList.add("js");</script>
+</head>
+<body data-page="informasi">
+
+<div data-site-header></div>
+
+<main id="main">
+
+<section class="page-hero">
+  <div class="container">
+    <div class="crumbs"><a href="index.html">Beranda</a> <span>/</span> <span>Informasi</span></div>
+    <h1>Informasi Sekolah</h1>
+    <p>Pengumuman resmi, unduhan aplikasi, pertanyaan umum, karya warga sekolah, serta kanal komunikasi sekolah dalam satu halaman.</p>
+  </div>
+</section>
+
+<!-- ================= PENGUMUMAN ================= -->
+<section class="section" id="pengumuman">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="section-head__copy">
+        <span class="eyebrow">Pengumuman Resmi</span>
+        <h2>Informasi &amp; pengumuman sekolah</h2>
+        <p>Jadwal penilaian, pembagian rapor, kegiatan, dan informasi resmi lainnya untuk warga sekolah.</p>
+      </div>
+      <a class="link-more" href="berita.html?kategori=Pengumuman">Arsip pengumuman
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+    <div class="notice-list reveal" data-pengumuman></div>
+  </div>
+</section>
+
+<!-- ================= UNDUHAN ================= -->
+<section class="section section--abu" id="unduhan">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="section-head__copy">
+        <span class="eyebrow">Unduhan &amp; Aplikasi</span>
+        <h2>Layanan digital sekolah</h2>
+        <p>Akses aplikasi resmi dan dokumen pendukung pembelajaran maupun administrasi sekolah.</p>
+      </div>
+    </div>
+    <div class="download-list reveal" data-unduhan></div>
+    <p class="small muted" style="margin-top:14px">Tautan mengarah ke situs resmi penyedia layanan. Pastikan Anda membuka tautan dari sumber terpercaya.</p>
+  </div>
+</section>
+
+<!-- ================= FAQ ================= -->
+<section class="section" id="faq">
+  <div class="container">
+    <div class="split split--start">
+      <div class="reveal">
+        <span class="eyebrow">FAQ</span>
+        <h2>Pertanyaan yang sering diajukan</h2>
+        <p class="muted">Belum menemukan jawaban? Silakan hubungi sekolah melalui WhatsApp pada jam layanan, atau kirim pesan melalui buku tamu di halaman ini.</p>
+        <div class="cta__actions" style="margin-top:18px">
+          <a class="btn btn--primary" data-wa href="#">Tanya via WhatsApp</a>
+          <a class="btn btn--ghost" href="kontak.html">Halaman kontak</a>
+        </div>
+        <div class="card card--soft" style="margin-top:22px">
+          <div class="card__body">
+            <h3 style="font-size:.95rem">Jam layanan sekolah</h3>
+            <p class="small muted" style="margin:6px 0 0" data-cfg="sekolah.jamLayanan">Senin – Jumat, 07.00 – 15.30 WIB</p>
+          </div>
+        </div>
+      </div>
+      <div class="reveal" data-faq></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= MADING ================= -->
+<section class="section section--krem" id="mading">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="section-head__copy">
+        <span class="eyebrow">Mading Online</span>
+        <h2>Karya warga sekolah</h2>
+        <p>Ruang publikasi puisi, cerpen, dan karya visual peserta didik serta guru.</p>
+      </div>
+    </div>
+    <div class="reveal" data-mading></div>
+  </div>
+</section>
+
+<!-- ================= BUKU TAMU & PENGADUAN ================= -->
+<section class="section" id="buku-tamu">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="section-head__copy">
+        <span class="eyebrow">Buku Tamu &amp; Pengaduan</span>
+        <h2>Sampaikan pesan Anda</h2>
+        <p>Pesan akan diteruskan melalui WhatsApp resmi sekolah. Mohon sampaikan informasi yang benar dan tidak memuat data pribadi orang lain.</p>
+      </div>
+    </div>
+    <div class="grid grid--2">
+      <div class="card reveal">
+        <div class="card__body">
+          <h3>Buku Tamu</h3>
+          <p class="small muted" style="margin-bottom:16px">Tinggalkan kesan, pertanyaan, atau masukan untuk sekolah.</p>
+          <form class="form" data-wa-form data-subject="Buku Tamu Website">
+            <div class="form__row">
+              <div class="field">
+                <label for="tamu-nama">Nama</label>
+                <input id="tamu-nama" name="Nama" type="text" placeholder="Nama lengkap" required />
+              </div>
+              <div class="field">
+                <label for="tamu-asal">Asal / Instansi</label>
+                <input id="tamu-asal" name="Asal" type="text" placeholder="Contoh: Orang tua siswa kelas 3" />
+              </div>
+            </div>
+            <div class="field">
+              <label for="tamu-wa">Nomor WhatsApp</label>
+              <input id="tamu-wa" name="WhatsApp" type="tel" inputmode="tel" placeholder="08xx xxxx xxxx" />
+            </div>
+            <div class="field">
+              <label for="tamu-pesan">Pesan</label>
+              <textarea id="tamu-pesan" name="Pesan" placeholder="Tulis pesan Anda…" required></textarea>
+            </div>
+            <button class="btn btn--primary" type="submit">Kirim via WhatsApp</button>
+            <p class="form__note">Formulir ini membuka WhatsApp dengan pesan yang sudah terisi. Tidak ada data yang disimpan di website.</p>
+            <p class="form__status" data-form-status></p>
+          </form>
+        </div>
+      </div>
+
+      <div class="card reveal">
+        <div class="card__body">
+          <h3>Pengaduan &amp; Saran</h3>
+          <p class="small muted" style="margin-bottom:16px">Sampaikan laporan, saran, atau masukan terkait layanan sekolah.</p>
+          <form class="form" data-wa-form data-subject="Pengaduan / Saran Website">
+            <div class="form__row">
+              <div class="field">
+                <label for="aduan-nama">Nama (boleh inisial)</label>
+                <input id="aduan-nama" name="Nama" type="text" placeholder="Nama atau inisial" required />
+              </div>
+              <div class="field">
+                <label for="aduan-jenis">Jenis pesan</label>
+                <select id="aduan-jenis" name="Jenis">
+                  <option>Pengaduan</option>
+                  <option>Saran</option>
+                  <option>Pertanyaan</option>
+                  <option>Apresiasi</option>
+                </select>
+              </div>
+            </div>
+            <div class="field">
+              <label for="aduan-kontak">Kontak (opsional)</label>
+              <input id="aduan-kontak" name="Kontak" type="text" placeholder="Nomor WhatsApp atau email" />
+            </div>
+            <div class="field">
+              <label for="aduan-pesan">Uraian</label>
+              <textarea id="aduan-pesan" name="Uraian" placeholder="Jelaskan pesan Anda secara singkat dan jelas…" required></textarea>
+            </div>
+            <button class="btn btn--primary" type="submit">Kirim via WhatsApp</button>
+            <p class="form__note">Untuk keadaan darurat, hubungi sekolah langsung melalui telepon/WhatsApp resmi.</p>
+            <p class="form__status" data-form-status></p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TAUTAN PENTING ================= -->
+<section class="section section--abu" id="tautan">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="section-head__copy">
+        <span class="eyebrow">Tautan Penting</span>
+        <h2>Portal &amp; layanan pendidikan</h2>
+        <p>Tautan resmi yang sering digunakan warga sekolah.</p>
+      </div>
+    </div>
+    <div class="quick-grid reveal" data-tautan></div>
+  </div>
+</section>
+
+</main>
+
+<div data-site-footer></div>
+
+<script src="assets/js/data.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>
