@@ -162,14 +162,14 @@ Bila foto gagal dimuat, kartu otomatis menampilkan inisial nama.
 
 ## 6. Publikasi ke GitHub Pages
 
-Repositori: `eenking/eenking.github.io` — branch `main`, folder root.
+Repositori: `sdn22pontianakbarat/sdn22pontianakbarat.github.io` — branch `main`, folder root.
 
 1. Unduh/ekstrak paket ZIP website ini.
 2. Buka repositori GitHub → **Add file → Upload files**.
 3. Unggah **seluruh isi folder** (bukan folder pembungkusnya), termasuk
    `index.html`, semua halaman `.html`, folder `assets/`, dan file `.nojekyll`.
 4. Commit ke branch `main`.
-5. Tunggu 1–2 menit, lalu buka <https://eenking.github.io/>.
+5. Tunggu 1–2 menit, lalu buka <https://sdn22pontianakbarat.github.io/>.
 6. Jika halaman lama masih tampil, lakukan *hard refresh* (Ctrl + F5) atau cek
    **Settings → Pages** memastikan source = `Deploy from a branch`, branch `main`, folder `/ (root)`.
 
