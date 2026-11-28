@@ -120,6 +120,8 @@ li { margin-bottom: .35rem; }
 .brand__text { line-height: 1.08; }
 .brand__name { display: block; font-weight: 800; font-size: .98rem; letter-spacing: -.02em; }
 .brand__place { display: block; font-weight: 800; font-size: .98rem; color: var(--merah); letter-spacing: -.02em; }
+.masthead .brand__name { white-space: nowrap; }
+.masthead .brand__place { display: inline; }
 .brand__tag { display: block; font-size: .62rem; text-transform: uppercase; letter-spacing: .14em; color: var(--ink-2); font-weight: 700; margin-top: 5px; }
 
 .nav { margin-left: auto; }
@@ -177,7 +179,7 @@ li { margin-bottom: .35rem; }
 /* ---------- Hero ---------- */
 .hero { position: relative; overflow: hidden; background: var(--merah-gelap); color: #fff; padding: 0 0 96px; }
 .hero__bg { position: absolute; inset: 0; }
-.hero__bg img { width: 100%; height: 100%; object-fit: cover; object-position: center 35%; }
+.hero__bg img { width: 100%; height: 100%; object-fit: cover; object-position: 70% 35%; }
 .hero__veil {
   position: absolute; inset: 0;
   background:
@@ -207,6 +209,10 @@ li { margin-bottom: .35rem; }
 }
 .spot__head { display: flex; align-items: center; justify-content: space-between; padding: 6px 10px 12px; font-size: .7rem; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; color: rgba(255, 255, 255, .7); }
 .spot__head a { color: #fff; font-size: .72rem; display: inline-flex; align-items: center; gap: 4px; }
+.spot__slide { animation: spot-slide-in .4s ease both; touch-action: pan-y; }
+.spot__slide[data-direction="prev"] { animation-name: spot-slide-in-reverse; }
+@keyframes spot-slide-in { from { opacity: 0; transform: translateX(18px); } to { opacity: 1; transform: translateX(0); } }
+@keyframes spot-slide-in-reverse { from { opacity: 0; transform: translateX(-18px); } to { opacity: 1; transform: translateX(0); } }
 .spot__card { display: block; background: #fff; border-radius: 20px; overflow: hidden; color: var(--ink); }
 .spot__card:hover { color: var(--ink); }
 .spot__img { position: relative; aspect-ratio: 16 / 9; overflow: hidden; }
@@ -217,6 +223,10 @@ li { margin-bottom: .35rem; }
 .spot__body h2 { font-size: 1.18rem; margin: 4px 0 6px; }
 .spot__body p { font-size: .84rem; color: var(--ink-2); margin-bottom: 10px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
 .spot__body .meta { font-size: .74rem; }
+.spot__controls { display: flex; align-items: center; justify-content: center; gap: 10px; padding-top: 10px; color: rgba(255, 255, 255, .85); }
+.spot__arrow { display: grid; place-items: center; width: 30px; height: 30px; padding: 0; border: 1px solid rgba(255, 255, 255, .28); border-radius: 50%; background: rgba(255, 255, 255, .1); color: #fff; cursor: pointer; transition: background .2s, transform .2s; }
+.spot__arrow:hover { background: rgba(255, 255, 255, .22); transform: scale(1.06); }
+.spot__count { min-width: 42px; text-align: center; font-size: .74rem; font-weight: 700; font-variant-numeric: tabular-nums; }
 
 .stats-strip { position: relative; z-index: 5; margin-top: -52px; }
 .hero__stats { display: grid; grid-template-columns: repeat(4, 1fr); background: #fff; border: 1px solid var(--line); border-radius: 20px; box-shadow: var(--shadow); overflow: hidden; }
@@ -648,6 +658,7 @@ html.js .reveal.is-visible { opacity: 1; transform: none; }
   html.js .reveal { opacity: 1; transform: none; transition: none; }
   html { scroll-behavior: auto; }
   .ticker__track { animation: none; }
+  .spot__slide { animation: none; }
 }
 
 /* ---------- Responsif ---------- */

@@ -30,8 +30,8 @@ const SITE_CONFIG = {
     editor: "Rendra Setiadi, S.Kom — TU & Operator Sekolah",
     tahunPelajaran: "2026/2027",
     logo: "https://lh3.googleusercontent.com/d/1qIecAxdkPr3Aswl0EKl4QcpUTXXmB_S0=w512",
-    fotoKepsek: "https://lh3.googleusercontent.com/d/1YVoHog2kG9OpDnzcEwGal63nplIoQcbP=w600",
-    hero: U("photo-1577896851231-70ef18881754", 1800),
+    fotoKepsek: "assets/img/kepsek-amalia-lamuri.jpg",
+    hero: "assets/img/lapangan-sekolah.jpeg",
     visi:
       "Terwujudnya peserta didik yang beriman, cerdas, berkarakter, mandiri, dan berbudaya, serta peduli terhadap lingkungan.",
     misi: [
@@ -169,7 +169,7 @@ const SITE_CONFIG = {
 };
 
 const STAFF_FOTO = {
-  "AMALIA LAMURI, S.Pd": "1YVoHog2kG9OpDnzcEwGal63nplIoQcbP",
+  "AMALIA LAMURI, S.Pd": "assets/img/kepsek-amalia-lamuri.jpg",
   "SRI SUYATI, S.Pd": "1TNYTmhktKtZAkk2wSMj5O86tuy1_dqJw",
   "JULIANI, S.Pd": "1gHy3HxsHVdeTfxSPYuzOhHG2PBFQknuE",
   "NOVITA AYU WARDANI, S.Pd": "1u22eY7TDmnoK-mQ1oj4Fk1u-_1onrWWZ",

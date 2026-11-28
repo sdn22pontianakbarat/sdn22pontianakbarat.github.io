@@ -45,7 +45,8 @@ function initials(name) {
 }
 function staffPhoto(nama) {
   const id = STAFF_FOTO[nama];
-  return id ? `https://lh3.googleusercontent.com/d/${id}=w600` : "";
+  if (!id) return "";
+  return id.startsWith("assets/") ? id : `https://lh3.googleusercontent.com/d/${id}=w600`;
 }
 function youtubeId(src) {
   if (!src) return "";
@@ -229,8 +230,7 @@ function headerHtml() {
       <a class="brand" href="index.html" aria-label="${esc(s.nama)}">
         <img class="brand__logo" src="${esc(s.logo)}" alt="Logo ${esc(s.nama)}" />
         <span class="brand__text">
-          <span class="brand__name">SD Negeri 22</span>
-          <span class="brand__place">Pontianak Barat</span>
+          <span class="brand__name">SDN 22 <span class="brand__place">Pontianak Barat</span></span>
           <span class="brand__tag">${esc(s.motto)}</span>
         </span>
       </a>
@@ -245,7 +245,7 @@ function headerHtml() {
         </div>
       </nav>
       <div class="masthead__actions">
-        <a class="btn btn--primary btn--sm" href="${esc(link("spmb"))}" target="_blank" rel="noopener">SPMB 2026</a>
+        <a class="btn btn--primary btn--sm" href="${esc(link("spmb"))}" target="_blank" rel="noopener">SPMB</a>
       </div>
     </div>
   </header>`;
@@ -427,19 +427,123 @@ function newsCompact(item) {
 function renderSpotlight() {
   const host = $("[data-spotlight]");
   if (!host) return;
-  const item = BERITA[0];
-  host.innerHTML = `<a class="spot__card" href="berita.html?slug=${encodeURIComponent(item.slug)}">
-    <div class="spot__img">
-      <img src="${esc(item.gambar)}" alt="${esc(item.judul)}" />
-      <span class="chip chip--solid">Sorotan</span>
+  const items = BERITA.slice().sort((a, b) => {
+    const dateA = toDate(a.tanggal);
+    const dateB = toDate(b.tanggal);
+    return (dateB ? dateB.getTime() : 0) - (dateA ? dateA.getTime() : 0);
+  });
+  if (!items.length) return;
+
+  let current = 0;
+  let timer = null;
+  let paused = false;
+  let touchStart = null;
+  let suppressClick = false;
+  let suppressClickTimer = null;
+
+  function stopAutoplay() {
+    if (timer !== null) {
+      window.clearInterval(timer);
+      timer = null;
+    }
+  }
+  function startAutoplay() {
+    if (timer !== null || paused || items.length < 2 || document.hidden) return;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    timer = window.setInterval(() => changeSlide(1), 6000);
+  }
+  function renderSlide(direction) {
+    const item = items[current];
+    host.innerHTML = `<div class="spot__slide" data-direction="${direction < 0 ? "prev" : "next"}">
+      <a class="spot__card" href="berita.html?slug=${encodeURIComponent(item.slug)}">
+        <div class="spot__img">
+          <img src="${esc(item.gambar)}" alt="${esc(item.judul)}" />
+          <span class="chip chip--solid">Sorotan</span>
+        </div>
+        <div class="spot__body">
+          <span class="eyebrow eyebrow--tight">${esc(item.kategori)}</span>
+          <h2>${esc(item.judul)}</h2>
+          <p>${esc(item.ringkas)}</p>
+          <span class="meta">${icon("calendar", 14)} ${fmtDateShort(item.tanggal)} <span class="meta__dot"></span> ${readingTime(item)} menit baca</span>
+        </div>
+      </a>
     </div>
-    <div class="spot__body">
-      <span class="eyebrow eyebrow--tight">${esc(item.kategori)}</span>
-      <h2>${esc(item.judul)}</h2>
-      <p>${esc(item.ringkas)}</p>
-      <span class="meta">${icon("calendar", 14)} ${fmtDateShort(item.tanggal)} <span class="meta__dot"></span> ${readingTime(item)} menit baca</span>
-    </div>
-  </a>`;
+    <div class="spot__controls" aria-label="Navigasi sorotan berita">
+      <button class="spot__arrow" type="button" data-spot-prev aria-label="Berita lebih baru">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>
+      </button>
+      <span class="spot__count" aria-label="Berita ${current + 1} dari ${items.length}">${current + 1} / ${items.length}</span>
+      <button class="spot__arrow" type="button" data-spot-next aria-label="Berita lebih lama">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+      </button>
+    </div>`;
+  }
+  function changeSlide(direction) {
+    current = (current + direction + items.length) % items.length;
+    renderSlide(direction);
+    stopAutoplay();
+    startAutoplay();
+  }
+
+  renderSlide(1);
+  host.addEventListener("click", (event) => {
+    if (suppressClick) {
+      event.preventDefault();
+      event.stopPropagation();
+      suppressClick = false;
+      window.clearTimeout(suppressClickTimer);
+      return;
+    }
+    if (event.target.closest("[data-spot-prev]")) changeSlide(-1);
+    if (event.target.closest("[data-spot-next]")) changeSlide(1);
+  }, true);
+  host.addEventListener("mouseenter", () => {
+    paused = true;
+    stopAutoplay();
+  });
+  host.addEventListener("mouseleave", () => {
+    paused = false;
+    startAutoplay();
+  });
+  host.addEventListener("focusin", () => {
+    paused = true;
+    stopAutoplay();
+  });
+  host.addEventListener("focusout", (event) => {
+    if (!host.contains(event.relatedTarget)) {
+      paused = false;
+      startAutoplay();
+    }
+  });
+  host.addEventListener("pointerdown", (event) => {
+    if (event.pointerType !== "touch") return;
+    touchStart = { x: event.clientX, y: event.clientY };
+    event.currentTarget.setPointerCapture(event.pointerId);
+    stopAutoplay();
+  });
+  host.addEventListener("pointerup", (event) => {
+    if (!touchStart) return;
+    const deltaX = event.clientX - touchStart.x;
+    const deltaY = event.clientY - touchStart.y;
+    touchStart = null;
+    if (Math.abs(deltaX) < 45 || Math.abs(deltaX) < Math.abs(deltaY)) {
+      startAutoplay();
+      return;
+    }
+    suppressClick = true;
+    window.clearTimeout(suppressClickTimer);
+    suppressClickTimer = window.setTimeout(() => { suppressClick = false; }, 500);
+    changeSlide(deltaX < 0 ? 1 : -1);
+  });
+  host.addEventListener("pointercancel", () => {
+    touchStart = null;
+    startAutoplay();
+  });
+  document.addEventListener("visibilitychange", () => {
+    if (document.hidden) stopAutoplay();
+    else startAutoplay();
+  });
+  startAutoplay();
 }
 
 function renderTicker() {
